@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #020617;
+  color: #f1f5f9;
+}
+
+/* Slightly wider toggle track for the on/off switch. */
+input[type='range'] {
+  accent-color: #2563eb;
+}
