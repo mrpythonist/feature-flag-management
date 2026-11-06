@@ -1,0 +1,69 @@
+name: Bug report
+description: Report a bug in the API or the dashboard
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Fill in what you can. Do not paste real SDK keys, JWTs, passwords, or production connection strings. Use the demo values from `.env.example` only.
+  - type: textarea
+    id: describe
+    attributes:
+      label: Describe the bug
+      description: What happened, and what did you expect instead?
+      placeholder: The audit log filter returns entries for the wrong environment.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: The smallest set of steps that shows the problem.
+      placeholder: |
+        1. Seed the demo project.
+        2. Open the audit page and filter by environment staging.
+        3. Entries for production are shown.
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Commit tested
+      description: Output of `git rev-parse --short HEAD`.
+      placeholder: 3253263
+    validations:
+      required: false
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js version
+      description: Output of `node --version`.
+      placeholder: v20.17.0
+    validations:
+      required: false
+  - type: dropdown
+    id: setup
+    attributes:
+      label: How are you running it?
+      options:
+        - Docker Compose
+        - Local (API and dashboard from source)
+        - Other (describe below)
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or error output
+      description: Paste the full error output. Remove any secrets first.
+      render: shell
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I checked that this bug is not already reported.
+        - label: I removed all secrets from this report.
