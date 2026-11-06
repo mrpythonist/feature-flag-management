@@ -1,0 +1,8 @@
+Command: cd apps/api && npm run build
+Date: 2026-11-06T05:07:54Z  Node: v24.22.1  Commit: 3253263
+---
+
+> @feature-flag-platform/api@1.0.0 build
+> tsc -p tsconfig.json
+
+exit code: 0
