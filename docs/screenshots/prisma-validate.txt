@@ -1,0 +1,23 @@
+Command: cd apps/api && npx prisma validate (first without DATABASE_URL, then with it set)
+Date: 2026-11-06T05:08:42Z  Node: v24.22.1  Commit: 3253263
+Note: prisma validate does not connect to the database, but it requires DATABASE_URL to be set.
+--- without DATABASE_URL ---
+Prisma schema loaded from prisma/schema.prisma
+Error: Prisma schema validation - (get-config wasm)
+Error code: P1012
+error: Environment variable not found: DATABASE_URL.
+  -->  prisma/schema.prisma:15
+   | 
+14 |   provider = "postgresql"
+15 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+[Context: getConfig]
+
+Prisma CLI Version : 5.22.0
+exit code: 1
+--- with DATABASE_URL set ---
+Prisma schema loaded from prisma/schema.prisma
+The schema at prisma/schema.prisma is valid 🚀
+exit code: 0
