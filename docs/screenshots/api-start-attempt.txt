@@ -1,0 +1,16 @@
+Command: cd apps/api && DATABASE_URL=postgresql://postgres:postgres@localhost:5432/featureflags timeout 20 node dist/index.js ; curl http://localhost:3001/health
+Date: 2026-11-06T05:08:49Z  Node: v24.22.1  Commit: 3253263
+Note: no PostgreSQL server runs on this machine, so the API fails fast at startup. This is the intended behaviour documented in the README: the API exits instead of serving silent 500s.
+---
+[cache] REDIS_URL not set — running without cache
+[api] failed to start: PrismaClientInitializationError: Can't reach database server at `localhost:5432`
+
+Please make sure your database server is running at `localhost:5432`.
+    at t (/home/hatch/workspace/github-open-source-readiness/work/feature-flag-management/apps/api/node_modules/@prisma/client/runtime/library.js:112:2488)
+    at async main (/home/hatch/workspace/github-open-source-readiness/work/feature-flag-management/apps/api/dist/index.js:44:5) {
+  clientVersion: '5.22.0',
+  errorCode: 'P1001'
+}
+exit code: 1
+--- curl /health while the API is not running ---
+curl exit code: 7
