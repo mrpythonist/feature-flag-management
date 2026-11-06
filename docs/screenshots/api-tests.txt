@@ -1,0 +1,22 @@
+Command: cd apps/api && npm run test:evaluate
+Date: 2026-11-06T05:07:53Z  Node: v24.22.1  Commit: 3253263
+Note: real terminal output from this environment. No PostgreSQL or Redis is running here; these checks do not need a database.
+---
+
+> @feature-flag-platform/api@1.0.0 test:evaluate
+> tsx src/test/evaluate.test.ts
+
+ok   disabled: non-targeted user
+ok   disabled: targeted user
+ok   targeted user enabled
+ok   untargeted user, 0% rollout
+ok   rolloutBucket deterministic
+info rollout distribution: 5023/10000 enabled (50.23%)
+ok   rollout ≈ 50% (±2pp)
+ok   0% rollout disables all
+ok   100% rollout enables all
+ok   flags bucket independently (≈1% collision, allow <5%)
+ok   no user, enabled
+ok   no user, disabled
+
+All evaluate.ts checks passed.
