@@ -1,0 +1,36 @@
+Command: cd apps/web && npm run build
+Date: 2026-11-06T05:07:57Z  Node: v24.22.1  Commit: 3253263
+---
+
+> @feature-flag-platform/web@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/7) ...
+   Generating static pages (1/7) 
+   Generating static pages (3/7) 
+   Generating static pages (5/7) 
+ ✓ Generating static pages (7/7)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    138 B          87.5 kB
+├ ○ /_not-found                          873 B          88.2 kB
+├ ○ /audit                               3.26 kB        90.6 kB
+├ ○ /flags                               4.6 kB         91.9 kB
+└ ○ /login                               2.48 kB        89.8 kB
++ First Load JS shared by all            87.3 kB
+  ├ chunks/117-19e2607edffa9051.js       31.7 kB
+  ├ chunks/fd9d1056-d7df9a6668024ace.js  53.6 kB
+  └ other shared chunks (total)          1.95 kB
+
+
+○  (Static)  prerendered as static content
+
+exit code: 0
