@@ -1,0 +1,46 @@
+name: Feature request
+description: Suggest an idea for this project
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature ideas are welcome. Small, well scoped requests are more likely to be built than large ones. Check the roadmap in the README first.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem would this solve? Who has it?
+      placeholder: I cannot rotate an SDK key without deleting and re-creating the whole environment.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How should it work? What should the API or dashboard do?
+      placeholder: Add an admin endpoint to regenerate the SDK key for one environment, and a button for it in the dashboard.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other ways to solve the same problem, and why they fall short.
+    validations:
+      required: false
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and risks
+      description: What would need to change? Any security, data, or compatibility concerns?
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I checked that this idea is not already requested.
+        - label: I am willing to help implement this (optional).
